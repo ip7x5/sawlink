@@ -1,9 +1,13 @@
 import type { NextConfig } from "next";
 
+const repositoryName = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "sawlink";
+const isUserSite = repositoryName.endsWith(".github.io");
+const githubBasePath = process.env.GITHUB_ACTIONS && !isUserSite ? `/${repositoryName}` : "";
+
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   output: process.env.GITHUB_ACTIONS ? "export" : undefined,
-  basePath: process.env.GITHUB_ACTIONS ? "/sawlink" : "",
+  basePath: githubBasePath,
   trailingSlash: true,
   turbopack: {
     root: process.cwd(),
