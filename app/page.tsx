@@ -1,4 +1,5 @@
 import { contactDetails } from "@/data/contact";
+import Link from "next/link";
 
 const services = [
   {
@@ -42,29 +43,29 @@ export default function Home() {
 
           <nav aria-label="Ana menü" className="hidden gap-8 text-sm text-gray-300 md:flex">
             <a href="#anasayfa" className="nav-link">Ana Sayfa</a>
-            <a href="/urunler" className="nav-link">Ürünler</a>
-            <a href="/hizmetler" className="nav-link">Hizmetler</a>
+            <Link href="/urunler" className="nav-link">Ürünler</Link>
+            <Link href="/hizmetler" className="nav-link">Hizmetler</Link>
             <a href="#hakkimizda" className="nav-link">Hakkımızda</a>
             <a href="#fuarlari" className="nav-link">Fuarlar</a>
-            <a href="/iletisim" className="nav-link">İletişim</a>
+            <Link href="/iletisim" className="nav-link">İletişim</Link>
           </nav>
 
-          <a
+          <Link
             href="/kayit"
             className="hidden rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold transition hover:-translate-y-0.5 hover:bg-blue-500 sm:block"
           >
             Kayıt Ol
-          </a>
+          </Link>
 
           <details className="relative sm:hidden">
             <summary className="cursor-pointer list-none rounded-lg border border-white/15 px-3 py-2 text-lg" aria-label="Menüyü aç">☰</summary>
             <nav aria-label="Mobil menü" className="absolute right-0 top-12 flex w-48 flex-col gap-4 rounded-xl border border-white/10 bg-[#101620] p-5 text-sm text-gray-300 shadow-xl">
               <a href="#anasayfa" className="nav-link">Ana Sayfa</a>
-              <a href="/urunler" className="nav-link">Ürünler</a>
-              <a href="/hizmetler" className="nav-link">Hizmetler</a>
+              <Link href="/urunler" className="nav-link">Ürünler</Link>
+              <Link href="/hizmetler" className="nav-link">Hizmetler</Link>
               <a href="#hakkimizda" className="nav-link">Hakkımızda</a>
               <a href="#fuarlari" className="nav-link">Fuarlar</a>
-              <a href="/iletisim" className="nav-link">İletişim</a>
+              <Link href="/iletisim" className="nav-link">İletişim</Link>
             </nav>
           </details>
         </div>
@@ -97,19 +98,19 @@ export default function Home() {
             </p>
 
             <div className="mt-9 flex flex-wrap gap-4">
-              <a
-                href="#hizmetler"
+              <Link
+                href="/urunler"
                 className="rounded-xl bg-blue-600 px-7 py-4 font-semibold hover:-translate-y-1 hover:bg-blue-500"
               >
                 Ürünleri İncele
-              </a>
+              </Link>
 
-              <a
-                href="#iletisim"
+              <Link
+                href="/iletisim"
                 className="rounded-xl border border-white/15 px-7 py-4 font-semibold hover:-translate-y-1 hover:bg-white/5"
               >
                 Bize Ulaşın
-              </a>
+              </Link>
             </div>
           </div>
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { contactDetails } from "@/data/contact";
 
 const products = [
   {
@@ -31,7 +32,7 @@ export default function ProductsPage() {
               <span className="text-sm font-bold text-blue-400">0{index + 1}</span>
               <h2 className="mt-6 text-2xl font-bold">{product.title}</h2>
               <p className="mt-4 leading-7 text-gray-400">{product.text}</p>
-              <a href="mailto:info@sawlink.com" className="mt-8 inline-block text-sm font-semibold text-blue-400 hover:text-blue-300">Teklif İste →</a>
+              <a href={`mailto:${contactDetails.email}`} className="mt-8 inline-block text-sm font-semibold text-blue-400 hover:text-blue-300">Teklif İste →</a>
             </article>
           ))}
         </div>
