@@ -32,6 +32,8 @@ jobs:
         env:
           GITHUB_ACTIONS: true
           NEXT_PUBLIC_SITE_URL: https://ip7x5.github.io/sawlink
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
